@@ -1,0 +1,562 @@
+/* Rose Blush · standalone Obsidian theme. */
+
+.theme-light {
+  color-scheme: light;
+  --color-base-00: #fffdfc;
+  --color-base-05: #fefafa;
+  --color-base-10: #fbf6f5;
+  --color-base-20: #f9f3f3;
+  --color-base-25: #f3e8e8;
+  --color-base-30: #eadada;
+  --color-base-35: #ddc4c4;
+  --color-base-40: #c9a5a5;
+  --color-base-50: #b78e8e;
+  --color-base-60: #a87a7a;
+  --color-base-70: #946969;
+  --color-base-100: #795454;
+  --background-primary: #fffdfc;
+  --background-primary-alt: #fbf6f5;
+  --background-secondary: #fefafa;
+  --background-secondary-alt: #fbf6f5;
+  --background-modifier-hover: #f9f3f3;
+  --background-modifier-active-hover: #f3e8e8;
+  --background-modifier-border: #f0e6e5;
+  --background-modifier-border-hover: #ddc4c4;
+  --background-modifier-border-focus: #946969;
+  --background-modifier-form-field: #fffdfc;
+  --background-modifier-box-shadow: #79545414;
+  --background-modifier-cover: #79545430;
+  --text-normal: #a87a7a;
+  --text-muted: #ab8181;
+  --text-faint: #b48b8b;
+  --text-on-accent: #fffdfc;
+  --text-accent: #946969;
+  --text-accent-hover: #795454;
+  --text-selection: #eadada80;
+  --text-highlight-bg: #f4e1c8;
+  --interactive-normal: #fffdfc;
+  --interactive-hover: #f9f3f3;
+  --interactive-accent: #8b6066;
+  --interactive-accent-hover: #795454;
+  --color-accent: #a87a7a;
+  --color-accent-1: #946969;
+  --color-accent-2: #795454;
+  --accent-h: 0;
+  --accent-s: 21%;
+  --accent-l: 57%;
+  --blush-heading: #946969;
+  --blush-code: #946969;
+  --rose-control-accent: #8b6066;
+  --rose-control-accent-hover: #795454;
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --color-base-00: #241f20;
+  --color-base-05: #2b2426;
+  --color-base-10: #30282a;
+  --color-base-20: #382e31;
+  --color-base-25: #423438;
+  --color-base-30: #503e43;
+  --color-base-35: #624b51;
+  --color-base-40: #80636a;
+  --color-base-50: #a4858b;
+  --color-base-60: #c0a0a5;
+  --color-base-70: #d8b8bd;
+  --color-base-100: #eedbde;
+  --background-primary: #241f20;
+  --background-primary-alt: #30282a;
+  --background-secondary: #2b2426;
+  --background-secondary-alt: #30282a;
+  --background-modifier-hover: #382e31;
+  --background-modifier-active-hover: #423438;
+  --background-modifier-border: #423438;
+  --background-modifier-border-hover: #624b51;
+  --background-modifier-border-focus: #a4858b;
+  --background-modifier-form-field: #241f20;
+  --background-modifier-box-shadow: #00000030;
+  --background-modifier-cover: #17121490;
+  --text-normal: #d8b8bd;
+  --text-muted: #c0a0a5;
+  --text-faint: #b09298;
+  --text-on-accent: #241f20;
+  --text-accent: #dfadb8;
+  --text-accent-hover: #eedbde;
+  --text-selection: #80636a66;
+  --text-highlight-bg: #594431;
+  --interactive-normal: #30282a;
+  --interactive-hover: #423438;
+  --interactive-accent: #c996a2;
+  --interactive-accent-hover: #dfadb8;
+  --color-accent: #c996a2;
+  --color-accent-1: #dfadb8;
+  --color-accent-2: #eedbde;
+  --accent-h: 346;
+  --accent-s: 32%;
+  --accent-l: 69%;
+  --blush-heading: #eedbde;
+  --blush-code: #dfadb8;
+  --rose-control-accent: #8b6066;
+  --rose-control-accent-hover: #93656c;
+}
+
+body {
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-monospace-theme: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-text-size: 16px;
+  --line-height-normal: 1.65;
+  --file-line-width: 780px;
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+  --radius-xl: 20px;
+  --ribbon-background: var(--background-secondary);
+  --ribbon-background-collapsed: var(--background-secondary);
+  --titlebar-background: var(--background-secondary-alt);
+  --titlebar-background-focused: var(--background-secondary-alt);
+  --titlebar-text-color: var(--text-muted);
+  --titlebar-text-color-focused: var(--text-normal);
+  --tab-container-background: var(--background-secondary);
+  --tab-background-active: var(--background-primary);
+  --tab-text-color: var(--text-muted);
+  --tab-text-color-active: var(--text-normal);
+  --tab-text-color-focused-active: var(--blush-heading);
+  --tab-radius: 10px;
+  --tab-curve: 0;
+  --tab-outline-width: 0px;
+  --tab-divider-color: transparent;
+  --tab-font-size: 13px;
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-normal);
+  --icon-color-active: var(--blush-heading);
+  --icon-color-focused: var(--blush-heading);
+  --icon-opacity: 1;
+  --icon-opacity-hover: 1;
+  --nav-item-color: var(--text-normal);
+  --nav-item-color-hover: var(--blush-heading);
+  --nav-item-color-active: var(--blush-heading);
+  --nav-item-background-hover: var(--background-modifier-hover);
+  --nav-item-background-active: var(--background-modifier-hover);
+  --nav-item-weight-active: 500;
+  --nav-item-padding: 6px 10px;
+  --nav-item-children-padding-left: 14px;
+  --nav-item-radius: 10px;
+  --nav-collapse-icon-color: var(--text-faint);
+  --nav-collapse-icon-color-collapsed: var(--text-muted);
+  --h1-color: var(--blush-heading);
+  --h2-color: var(--blush-heading);
+  --h3-color: var(--blush-heading);
+  --h4-color: var(--blush-heading);
+  --h5-color: var(--blush-heading);
+  --h6-color: var(--blush-heading);
+  --h1-size: 1.8em;
+  --h2-size: 1.45em;
+  --h3-size: 1.2em;
+  --h4-size: 1.1em;
+  --h5-size: 1em;
+  --h6-size: 1em;
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 600;
+  --inline-title-color: var(--blush-heading);
+  --inline-title-size: 1.8em;
+  --inline-title-weight: 600;
+  --bold-color: var(--blush-heading);
+  --italic-color: var(--text-normal);
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-external-color: var(--text-accent);
+  --link-external-color-hover: var(--text-accent-hover);
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-unresolved-color: var(--text-muted);
+  --link-unresolved-opacity: 1;
+  --checkbox-radius: 50%;
+  --checkbox-size: 17px;
+  --checkbox-color: var(--rose-control-accent);
+  --checkbox-color-hover: var(--rose-control-accent-hover);
+  --checkbox-border-color: var(--text-faint);
+  --checkbox-border-color-hover: var(--text-muted);
+  --checkbox-marker-color: #fffdfc;
+  --checklist-done-color: var(--text-muted);
+  --checklist-done-decoration: line-through;
+  --code-normal: var(--blush-code);
+  --code-background: var(--background-primary-alt);
+  --code-size: 0.9em;
+  --blockquote-border-color: var(--color-base-35);
+  --blockquote-border-thickness: 3px;
+  --blockquote-color: var(--text-muted);
+  --blockquote-background-color: var(--background-secondary);
+  --tag-color: var(--text-accent);
+  --tag-color-hover: var(--text-accent-hover);
+  --tag-background: var(--background-modifier-hover);
+  --tag-background-hover: var(--background-modifier-active-hover);
+  --tag-radius: 8px;
+  --tag-border-width: 0px;
+  --table-border-color: var(--background-modifier-border);
+  --hr-color: var(--background-modifier-border);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--color-base-25);
+  --scrollbar-active-thumb-bg: var(--color-base-35);
+  --background-modifier-message: var(--background-secondary-alt);
+  --search-result-background: var(--background-primary);
+  --embed-background: var(--background-secondary);
+  --embed-border-start: 2px solid var(--color-base-30);
+  --embed-padding: 12px;
+  --input-radius: 10px;
+  --button-radius: 10px;
+  --modal-radius: 16px;
+  --menu-radius: 12px;
+  --menu-item-radius: 7px;
+}
+
+/* Only the desktop ribbon width changes; sidebar and workspace geometry stay native. */
+body:not(.is-mobile) { --ribbon-width: 40px; }
+.workspace-ribbon { background-color: var(--ribbon-background); }
+.workspace-ribbon.mod-left.is-collapsed {
+  background-color: var(--ribbon-background-collapsed);
+}
+.side-dock-ribbon-action { border-radius: var(--radius-m); }
+.workspace-tab-header.is-active {
+  box-shadow: 0 1px 4px var(--background-modifier-box-shadow);
+}
+.view-header { background-color: var(--background-primary); }
+.markdown-rendered pre,
+.markdown-source-view.mod-cm6 .cm-embed-block,
+.markdown-rendered blockquote,
+.markdown-embed { border-radius: var(--radius-m); }
+.markdown-rendered :not(pre) > code,
+.markdown-source-view.mod-cm6 .cm-inline-code { border-radius: 4px; }
+.markdown-rendered blockquote { padding: 8px 16px; }
+.markdown-rendered img { border-radius: var(--radius-m); }
+.metadata-container { border-radius: var(--radius-m); }
+/* Keep native checkbox rendering, keyboard focus, and custom task-status plugins intact. */
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--background-modifier-border-focus);
+  outline-offset: 3px;
+}
+
+
+/* Rose Blush — rounded, banded note tables (Reading view and Live Preview).
+   Separate cell borders let corners round without clipping editing controls. */
+body {
+  --table-header-background: var(--table-row-alt-background);
+  --table-header-background-hover: var(--table-header-background);
+  --table-header-color: var(--text-normal);
+  --table-row-background-hover: var(--color-base-20);
+  --table-row-alt-background: var(--background-primary-alt);
+  --table-row-alt-background-hover: var(--color-base-20);
+  --table-column-alt-background: transparent;
+  --table-column-alt-background-hover: transparent;
+  --table-cell-padding: 10px 14px;
+  --table-header-weight: var(--font-normal);
+  --table-text-size: calc(var(--font-text-size) * 0.9);
+  --table-header-size: var(--table-text-size);
+  --rose-table-radius: 12px;
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--table-border-color);
+  border-radius: var(--rose-table-radius);
+  background-color: var(--background-primary);
+  font-size: var(--table-text-size);
+  box-shadow: var(--rose-table-shadow);
+  transition: box-shadow 180ms ease, border-color 180ms ease;
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table :is(th, td) {
+  border: 0;
+  border-right: 1px solid var(--table-border-color);
+  border-bottom: 1px solid var(--table-border-color);
+  padding: var(--table-cell-padding);
+  font-size: var(--table-text-size);
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table tr > :last-child {
+  border-right: 0;
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table thead th {
+  background-color: var(--table-header-background);
+  color: var(--table-header-color);
+  font-weight: var(--table-header-weight);
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table tbody tr:nth-child(odd) > :is(td, th) {
+  background-color: var(--background-primary);
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table tbody tr:nth-child(even) > :is(td, th) {
+  background-color: var(--table-row-alt-background);
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table thead tr:first-child > :first-child {
+  border-top-left-radius: calc(var(--rose-table-radius) - 1px);
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table thead tr:first-child > :last-child {
+  border-top-right-radius: calc(var(--rose-table-radius) - 1px);
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table tbody:last-child tr:last-child > :is(td, th) {
+  border-bottom: 0;
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table tbody:last-child tr:last-child > :first-child {
+  border-bottom-left-radius: calc(var(--rose-table-radius) - 1px);
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table tbody:last-child tr:last-child > :last-child {
+  border-bottom-right-radius: calc(var(--rose-table-radius) - 1px);
+}
+
+
+/* Rose Blush — floating rose table highlight and relative text size. */
+.theme-light {
+  --rose-table-shadow: 0 3px 10px #a87a7a12, 0 10px 28px #a87a7a14;
+  --rose-table-shadow-hover: 0 5px 16px #a87a7a22, 0 16px 40px #a87a7a26;
+}
+.theme-dark {
+  --rose-table-shadow: 0 3px 10px #00000030, 0 10px 28px #c996a212;
+  --rose-table-shadow-hover: 0 5px 16px #00000045, 0 16px 40px #c996a226;
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table:is(:hover, :focus-within) {
+  box-shadow: var(--rose-table-shadow-hover);
+  border-color: var(--color-base-35);
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) table {
+    transition: none;
+  }
+}
+
+/* Match native tooltip text, surface and directional arrow. */
+.tooltip:not(.mod-error) {
+  --tooltip-background: #f5edee;
+  --tooltip-color: #80565b;
+  --background-modifier-message: var(--tooltip-background);
+  --tooltip-shadow: 0 2px 8px #64414614;
+  border: 1px solid #e8d6d8;
+}
+
+input[type="checkbox"] {
+  border-radius: var(--checkbox-radius);
+}
+
+/* Compact pinned tabs. */
+/* Only horizontal main-workspace tabs; stacked tabs retain their native layout.
+   Obsidian stores pinned state on the status icon, not on the tab header. */
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) {
+  flex: 0 0 40px;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+}
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) .workspace-tab-header-inner {
+  justify-content: center;
+  padding-inline: 0;
+  gap: 0;
+}
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) :is(.workspace-tab-header-inner-title, .workspace-tab-header-status-container, .workspace-tab-header-inner-close-button) {
+  display: none;
+}
+/* Reveal the existing view icon, including Markdown and plugin-provided icons.
+   Do not replace SVGs or force their colors: active/hover colors stay native. */
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) .workspace-tab-header-inner-icon {
+  display: flex;
+  padding-inline: 0;
+}
+
+/* Native round switches preserve inputs, disabled states, and RTL mirroring. */
+:is(body .checkbox-container, body:not(.is-mobile) .setting-group.mod-list .checkbox-container) {
+  width: 32px;
+  min-width: 32px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: var(--background-modifier-border);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border-focus);
+  cursor: pointer;
+}
+:is(body .checkbox-container, body:not(.is-mobile) .setting-group.mod-list .checkbox-container).is-enabled {
+  background: var(--rose-control-accent);
+  box-shadow: none;
+}
+:is(body .checkbox-container, body:not(.is-mobile) .setting-group.mod-list .checkbox-container)::after,
+:is(body .checkbox-container, body:not(.is-mobile) .setting-group.mod-list .checkbox-container):is(.is-enabled, :active)::after {
+  width: 12px;
+  height: 12px;
+  top: 3px;
+  left: 3px;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--text-muted);
+  box-shadow: none;
+  opacity: 1;
+  transform: translateX(0);
+  transition: var(--rose-switch-transition, transform 120ms ease);
+}
+:is(body .checkbox-container, body:not(.is-mobile) .setting-group.mod-list .checkbox-container).is-enabled::after,
+:is(body .checkbox-container, body:not(.is-mobile) .setting-group.mod-list .checkbox-container).is-enabled:active::after {
+  transform: translateX(14px);
+  background: #fffdfc;
+}
+:is(body .checkbox-container, body:not(.is-mobile) .setting-group.mod-list .checkbox-container):is(:focus-visible, :focus-within) {
+  outline: 2px solid var(--background-modifier-border-focus);
+  outline-offset: 3px;
+}
+:is(body .checkbox-container, body:not(.is-mobile) .setting-group.mod-list .checkbox-container).is-disabled {
+  cursor: not-allowed;
+}
+@media (prefers-reduced-motion: reduce) {
+  body {
+    --rose-switch-transition: none;
+  }
+}
+
+/* Keep warm-white labels on solid rose controls in both modes. */
+:is(.theme-light, .theme-dark) :is(
+  .setting-group-filter.is-active,
+  button.mod-cta,
+  .setting-hotkey.mod-active,
+  .setting-item-control.mod-hotkey input:focus,
+  .file-recovery-list-item-header.is-active,
+  .sync-history-list-item-header.is-active,
+  .tag-pane-tag.is-active,
+  .flair.mod-pop
+) {
+  --interactive-accent: var(--rose-control-accent);
+  --interactive-accent-hover: var(--rose-control-accent-hover);
+  --text-on-accent: #fffdfc;
+}
+
+/* Preserve the distinct red treatment on error surfaces. */
+:is(.theme-light, .theme-dark) :is(
+  button.mod-warning,
+  button.mod-cta.mod-destructive,
+  .setting-group-filter.mod-error.is-active,
+  .setting-hotkey.has-conflict,
+  .tooltip.mod-error
+) {
+  --background-modifier-error: #aa283c;
+  --background-modifier-error-hover: #922233;
+  --text-on-accent: #fffdfc;
+}
+
+/* Rose Blush — core Slides (Reveal.js), light mode only.
+   Keep Reveal's native slide positioning, vertical centering and keyboard focus.
+   Every rule is scoped to the core plugin's presentation overlay. */
+.theme-light .slides-container {
+  background-color: #fffdfc;
+  --r-background-color: #fffdfc;
+  --r-main-color: #795454;
+  --r-heading-color: #8c6262;
+  --r-heading-text-transform: none;
+  --r-link-color: #8c6262;
+  --r-link-color-hover: #795454;
+  --r-link-color-dark: #795454;
+  --r-selection-background-color: #eadada;
+  --r-selection-color: #795454;
+}
+.theme-light .slides-container .reveal {
+  background-color: var(--r-background-color);
+  color: var(--r-main-color);
+}
+.theme-light .slides-container .reveal .slides,
+.theme-light .slides-container .reveal .slides section,
+.theme-light .slides-container .reveal :is(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li) {
+  text-align: left;
+}
+.theme-light .slides-container .reveal :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--r-heading-color);
+  text-transform: none;
+}
+.theme-light .slides-container .reveal :is(ul, ol, dl) {
+  display: block;
+}
+.theme-light .slides-container .reveal table {
+  margin-inline: 0;
+  font-size: 0.7em;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #eadada;
+  border-radius: 12px;
+  background-color: #fffdfc;
+  color: var(--r-main-color);
+  box-shadow: 0 3px 12px #a87a7a14;
+}
+.theme-light .slides-container .reveal table :is(th, td) {
+  font-size: inherit;
+  padding: 0.35em 0.6em;
+  border: 0;
+  border-bottom: 1px solid #eadada;
+  color: inherit;
+}
+.theme-light .slides-container .reveal table thead th {
+  background-color: #fbf6f5;
+  font-weight: var(--font-normal);
+}
+.theme-light .slides-container .reveal table tbody tr:nth-child(even) > :is(th, td) {
+  background-color: #fbf6f5;
+}
+.theme-light .slides-container .reveal table thead tr:first-child > :first-child {
+  border-top-left-radius: 11px;
+}
+.theme-light .slides-container .reveal table thead tr:first-child > :last-child {
+  border-top-right-radius: 11px;
+}
+.theme-light .slides-container .reveal table tbody:last-child tr:last-child > :is(th, td) {
+  border-bottom: 0;
+}
+.theme-light .slides-container .reveal table tbody:last-child tr:last-child > :first-child {
+  border-bottom-left-radius: 11px;
+}
+.theme-light .slides-container .reveal table tbody:last-child tr:last-child > :last-child {
+  border-bottom-right-radius: 11px;
+}
+.theme-light .slides-container .reveal pre {
+  margin-inline: 0;
+  background-color: #fbf6f5;
+  border: 1px solid #eadada;
+  border-radius: 10px;
+  color: #795454;
+  box-shadow: none;
+}
+.theme-light .slides-container .reveal pre code {
+  padding: 0.7em 0.9em;
+  background-color: transparent;
+  color: inherit;
+}
+.theme-light .slides-container .reveal :not(pre) > code {
+  padding: 0.1em 0.3em;
+  background-color: #fbf6f5;
+  color: #8c6262;
+  border-radius: 4px;
+}
+.theme-light .slides-container .reveal .controls {
+  color: #a87a7a;
+}
+
+/* Notices use readable theme text on a pale surface (including Sync and Tasking). */
+body .notice-container .notice {
+  background-color: var(--background-secondary);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+}
+body .notice-container .notice .notice-message { color: inherit; }
+
+/* Compact chevron in editor breadcrumbs. */
+.view-header-title-parent .view-header-breadcrumb-separator {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-inline: 3px;
+  font-size: 0;
+}
+.view-header-title-parent .view-header-breadcrumb-separator::before {
+  content: "";
+  box-sizing: border-box;
+  width: 5px;
+  height: 5px;
+  margin-inline: 3.5px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
